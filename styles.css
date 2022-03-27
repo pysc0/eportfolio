@@ -41,6 +41,7 @@ li {
     width: 100%;    
     max-width: 800px;
     margin: 0 auto;
+
 }
 /* NAVIGATION */
 
@@ -107,9 +108,11 @@ nav {
 }
 
 .about-me__info--title {
-    padding-top: 8px;
+    padding-top: 16px;
     padding-bottom: 8px;
 }
+
+
 
 .about-me__picture--mask {
     width: 100px;
@@ -122,7 +125,6 @@ nav {
 .about-me__picture {
     width: 100%;
     
-
     transform: scale(3.1);
     padding-top: 1px;
 }
@@ -148,6 +150,7 @@ nav {
 .about-me__img {
     width: 100%;
 }
+
 
 section:nth-child(even) {
     background-color: #f8f8f8;
