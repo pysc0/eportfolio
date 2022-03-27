@@ -107,6 +107,8 @@ nav {
 
 }
 
+.about-me__img--container
+
 .about-me__info--title {
     padding-top: 16px;
     padding-bottom: 8px;
@@ -145,6 +147,7 @@ nav {
     flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .about-me__img {
