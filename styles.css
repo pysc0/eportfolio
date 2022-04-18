@@ -241,7 +241,7 @@ section {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 
 
@@ -257,6 +257,10 @@ section:nth-child(even) {
 
 #language {
     background: transparent;
+}
+
+.wrapper {
+    background: radial-gradient( #1b2735 0%, #090a0f 100%);
 }
 
 .language {
