@@ -103,7 +103,7 @@ nav {
 }
 
 .nav__link--anchor-primary {
-    background-color: #6030b1;
+    background-color: #123B77;
     padding: 8px 20px;
     border-radius: 50px;
     color: white;
@@ -111,18 +111,18 @@ nav {
 }
 
 .nav__link--anchor-primary:hover {
-    background-color: #5d3ff5 ;
+    background-color: #364d70 ;
 }
 
 .personal__logo {
     font-size:  24px;
-    color: #6030b1;
+    color: #123B77;
     margin: 0 12px;
     font-weight: bold;
 }
 
 .text--purple {
-    color: #6030b1;
+    color: #123B77;
 }
 
 #about-me {
@@ -237,7 +237,7 @@ nav {
     }
 }
 
-section {
+section:not(.wrapper) {
     position: relative;
     display: flex;
     flex-direction: column;
