@@ -186,8 +186,16 @@ nav {
     height: 200px;
     perspective: 1000px;
     margin: 100px auto 0;
+    transition: all 500ms ease;
 
 }
+
+.cube__container:hover {
+    width: 300px;
+    height: 300px;
+}
+
+
 
 .cube {
     transform-style: preserve-3d;
