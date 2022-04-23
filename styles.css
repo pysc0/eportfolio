@@ -274,6 +274,7 @@ section:not(.wrapper) {
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 20px;
+    font-size: 36px;
 }
 
 #language {
@@ -544,6 +545,20 @@ footer {
     transform: translateX(60px);
     opacity: 1;
 }
+
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 
 @media (max-width: 768px) {
     .project__description--title,

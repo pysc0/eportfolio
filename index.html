@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacob Andrews</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./node_modules/particles.js/demo/css/style.css">
-    <script src="./node_modules/particles.js/particles.js"></script>
-    <script src="./node_modules/particles.js/demo/js/app.js"></script>
+    <script src=".main.js"></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -77,7 +75,7 @@
     </section>
     <section id="language">
         <a name="languagelist"></a>
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
                 <h1 class="section__title">This is my <span class="text--purple">technology stack</span></h1>
                 <div class="language__list">
@@ -136,7 +134,7 @@
     </section>
     <section id="projects">
         <a name="projects"></a>
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
                 <h1 class="section__title"> Here are some of my <span class="text--purple">projects</span></h1>
                 <ul id="project__list">
@@ -200,10 +198,10 @@
     </section>
     <section id="contact">
         <a name="contact"></a>
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
                 <h1 class="contact__text">Lets <span class="text--purple">talk!</span></h1>
-                <form id="contact__form">
+                <form id="contact__form" onsubmit="return false">
                     <div class="form__item">
                         <label class="name__item--label">Name</label>
                         <input type="text" name="user_name" required="" class="input" placeholder="John Doe">
@@ -216,7 +214,8 @@
                         <label class="name__item--label">Message</label>
                         <textarea type="text" name="message" required="" class="input" placeholder=""></textarea>
                     </div>
-                    <button class="contactBtn" onclick="sendContact()">Send</span></button>
+                    <button class="contactBtn" onclick="sendContact();">Send</button>
+                </form>
             </div>
             </div>
         </div>
@@ -256,6 +255,27 @@
             </div><div class="footer__copyright">Copyright © 2021 Jacob Andrews</div>
         </div>
 </footer>
+<script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i < reveals.length; i++) {
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+</script>
 
 </body>
 </html>
