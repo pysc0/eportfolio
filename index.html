@@ -34,6 +34,14 @@
                     nav__link--anchor-primary
                     ">Contact</a>
                 </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class=" nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">
+                        <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a>
+                </li>
             </ul>
         </nav>
         <div class="flex flex-1">
@@ -140,24 +148,22 @@
                 <ul id="project__list">
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./Assets/homepage.png" class="project__img" alt="Work In Progress">
+                            <img src="./Assets/spotify react.png" class="project__img" alt="Work In Progress">
                             <div class="project__description">
-                                <h3 class="project__description--title">React Templates</h3>
+                                <h3 class="project__description--title">Spotify React Clone</h3>
                                 <h4 class="project__description--sub-title">
-                                    HMTL , CSS, Javascript, Vue, vuex
+                                    HMTL , CSS, Javascript, React
                                 </h4>
                                 <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Autem alias asperiores maiores? Fuga maxime culpa unde, natus 
-                                    nihil animi optio!
+                                    Currently a work in progress project that I'm working on to better my skills in a react environment.
                                 </p>
                                 
                                 <div class="project__description--links">
-                                    <a href="https://pysc0.github.io/ReactTemplate-Project/"  target="_blank"  class="project__description--link">
+                                    <a href="https://spotify-clone-seven-mauve.vercel.app/"  target="_blank"  class="project__description--link">
                                         <i class="fab fa-github "></i>
                         <li class="project">
                         <div class="project__wrapper">
-                            <img src="./Assets/christmasproject.png" class="project__img" alt="Work In Progress">
+                            <img src="./Assets/christmasproject.png" class="project__img p-r" alt="Work In Progress">
                             <div class="project__description">
                                 <h3 class="project__description--title2">Christmas Project</h3>
                                 <h4 class="project__description--sub-title2">
@@ -201,20 +207,20 @@
         <div class="container reveal">
             <div class="row">
                 <h1 class="contact__text">Lets <span class="text--purple">talk!</span></h1>
-                <form id="contact__form" onsubmit="return false">
+                <form id="contact__form" onsubmit="sendEmail(); reset(); return false;">
                     <div class="form__item">
                         <label class="name__item--label">Name</label>
-                        <input type="text" name="user_name" required="" class="input" placeholder="John Doe">
+                        <input type="text" name="Name" required="" class="input" placeholder="John Doe">
                     </div>
                     <div class="form__item">
                         <label class="name__item--label">Email</label>
-                        <input type="email" name="user_email" required="" class="input" placeholder="Johndoe@example.com">
+                        <input type="email" name="Email" required="" class="input" placeholder="Johndoe@example.com">
                     </div>
                     <div class="form__item">
                         <label class="name__item--label">Message</label>
                         <textarea type="text" name="message" required="" class="input" placeholder=""></textarea>
                     </div>
-                    <button class="contactBtn" onclick="sendContact();">Send</button>
+                    <button class="contactBtn">Send</button>
                 </form>
             </div>
             </div>
@@ -275,6 +281,22 @@
                 }
             }
         }
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "darksift@gmail.com",
+            Password : "BOcaj.1q2w3e4r5t",
+            To : 'darksift@gmail.com',
+            From : document.getElementByName("Email").value,
+            Subject : "New Contact Form Enquiry",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+    }
 </script>
 
 </body>

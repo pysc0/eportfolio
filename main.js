@@ -31,24 +31,7 @@ function fieldValidation(field, validationFunction) {
 function isValid() {
     var valid = true;
     
-    valid &= fieldValidation(fields.user_name, isNotEmpty);
-    valid &= fieldValidation(fields.user_email, isEmail);
+    valid &= fieldValidation(fields.Name, isNotEmpty);
+    valid &= fieldValidation(fields.Email, isEmail);
     return valid;
-}
-
-class User {
-    constructor(user_name, user_email) {
-    this.user_name = user_name;
-    this.user_email = user_email;
-    }
-   }
-
-function sendContact() {
-    if (isValid()) {
-        let usr = new User(user_email.value, user_email);
-
-        alert(`${usr.user_name} thanks for the message!.`)
-    } else {
-        alert('There was an error')
-    }
 }
